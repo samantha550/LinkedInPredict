@@ -10,7 +10,7 @@ from PIL import Image
 
 
 
-s = pd.read_csv('/Users/samsa/OneDrive/Desktop/Programming II/social_media_usage.csv')
+s = pd.read_csv('social_media_usage.csv')
 s.ndim
 
 def clean_sm(x):
