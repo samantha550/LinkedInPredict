@@ -47,7 +47,7 @@ y_pred = lr.predict(x_test)
 
 
 st.markdown(f"## :sparkles: Welcome :sparkles: ")
-st.markdown(f"### The purpose of this website is to predict the chances of you being a LinkedIn User")
+st.markdown(f"### The purpose of this app is to predict the chances of you being a LinkedIn User")
 st.markdown(f"#### To get started please enter your information below:")
 age = st.slider(label="Enter your age",  min_value=1, max_value=100,value=50)
 inc = st.selectbox(f"Income Range - see below for description of options", options = [1,2,3,4,5,6,7,8,9] )
@@ -103,9 +103,9 @@ if  user_pred== 1:
     user_label = "a LinkedIn User :star2:"
 else:
     user_label = "not a LinkedIn User"
-with st.sidebar:
-    if st.checkbox(f" :arrow_left: Click the check box to see our prediciton!"):
-        st.write(f"## We predict you are: ### \n {user_label}")
+    
+if st.checkbox(f" :arrow_left: Click the check box to see our prediciton!"):
+    st.write(f"## We predict you are: ### \n {user_label}")
 
 
 st.write(f"The chances of you being a LinkedIn User are : {probs[0][1]}")
