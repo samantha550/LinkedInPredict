@@ -90,13 +90,10 @@ new_guess = pd.DataFrame({
 # Predict class, given input features
 user_pred = lr.predict(new_guess)
 
-# Generate probability of positive class (=1)
-
 probs = lr.predict_proba(new_guess)
 
-#user_guess = lr.predict(new_guess)
 
-#probs = lr.predict_proba([new_guess])
+st.write(f"The chances of you being a LinkedIn User are : {probs[0][1]}")
 
 # prediction 
 if  user_pred== 1:
@@ -107,9 +104,4 @@ else:
 if st.checkbox(f" :arrow_left: Click the check box to see our prediciton!"):
     st.write(f"## We predict you are: ### \n {user_label}")
 
-
-st.write(f"The chances of you being a LinkedIn User are : {probs[0][1]}")
-
-
-#st.write(f" ## We predict that you are a {user_label}")
 
