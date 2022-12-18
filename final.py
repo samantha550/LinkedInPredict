@@ -81,17 +81,17 @@ if inc == "Less than $10,000":
      inc = 1
 elif inc == "10 to under $20,000":
      inc = 2
-elif inc =="20 to under $30,000"
+elif inc =="20 to under $30,000":
     inc = 3
-elif inc == "30 to under $40,000"
+elif inc == "30 to under $40,000":
     inc = 4
-elif inc == "40 to under $50,000"
+elif inc == "40 to under $50,000":
     inc = 5
-elif inc == "50 to under $75,000"
+elif inc == "50 to under $75,000":
     inc = 6
-elif inc == " 75 to under $100,000"
+elif inc == " 75 to under $100,000":
     inc = 7
-elif inc == "100 to under $150,000"
+elif inc == "100 to under $150,000":
     inc = 8
 else:
     inc = 9
