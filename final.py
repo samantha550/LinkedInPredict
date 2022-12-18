@@ -50,16 +50,16 @@ st.markdown(f"## :sparkles: Welcome :sparkles: ")
 st.markdown(f"### The purpose of this app is to predict the chances of you being a LinkedIn User")
 st.markdown(f"#### To get started please enter your information below:")
 age = st.slider(label="Enter your age",  min_value=1, max_value=100,value=50)
-inc = st.selectbox(f"Income Range - see below for description of options", options = [1,2,3,4,5,6,7,8,9] )
-st.text(f"(1 = Less than $10,000 | "
-" 2 = 10 to under $20,000 | "
-" 3 = 20 to under $30,000 |"
-"4 = 30 to under $40,000 | "
-" 5 = 40 to under $50,000 | "
-" 6 = 50 to under $75,000 |"
-"7 = 75 to under $100,000 | "
-" 8 = 100 to under $150,000 | "
-" 9 = $150,000 or more)")
+inc = st.selectbox(f"Income Range - see below for description of options", options = ["Less than $10,000", "10 to under $20,000","20 to under $30,000","30 to under $40,000","40 to under $50,000","50 to under $75,000"," 75 to under $100,000","100 to under $150,000","$150,000 or more"] )
+#st.text(f"(1 = Less than $10,000 | "
+#" 2 = 10 to under $20,000 | "
+#" 3 = 20 to under $30,000 |"
+#"4 = 30 to under $40,000 | "
+#" 5 = 40 to under $50,000 | "
+#" 6 = 50 to under $75,000 |"
+#"7 = 75 to under $100,000 | "
+#" 8 = 100 to under $150,000 | "
+#" 9 = $150,000 or more)")
 #st.number_input("Income (low=1 to high=9)", 1, 9)
 deg= st.selectbox(f"Degree Level - see below for description of options", options = [1,2,3,4,5,6,7,8] )
 st.text(f"(1 = Did not go to High School |"
@@ -76,6 +76,25 @@ par = st.number_input("Parent (0=no, 1=yes)", 0, 1)
 gen = st.number_input("Gender (0=Male, 1=Female)", 0, 1)
 
 #st.write(f"#### Based on your responses as a {age} year old {gen_label}; who is {mar_label},{par_label}, a {deg_label}, and in a {inc_label} bracket: ")
+
+if inc == "Less than $10,000":
+     inc = 1
+elif inc == "10 to under $20,000":
+     inc = 2
+elif inc =="20 to under $30,000"
+    inc = 3
+elif inc == "30 to under $40,000"
+    inc = 4
+elif inc == "40 to under $50,000"
+    inc = 5
+elif inc == "50 to under $75,000"
+    inc = 6
+elif inc == " 75 to under $100,000"
+    inc = 7
+elif inc == "100 to under $150,000"
+    inc = 8
+else:
+    inc = 9
 
 new_guess = pd.DataFrame({
     "age": age,
