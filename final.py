@@ -98,7 +98,7 @@ else:
 if mar == "yes":
     mar = 1
  else:
-    0
+    mar=0
     
  
 new_guess = pd.DataFrame({
