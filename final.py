@@ -53,8 +53,8 @@ age = st.slider(label="Enter your age",  min_value=1, max_value=100,value=50)
 inc = st.selectbox(f"Income Range", options = ["Less than $10,000", "10 to under $20,000","20 to under $30,000","30 to under $40,000","40 to under $50,000","50 to under $75,000"," 75 to under $100,000","100 to under $150,000","$150,000 or more"] )
 deg= st.selectbox(f"Degree Level", options = ["Did not go to High School","High school incomplete","High school graduate or GED","Some college, no degree","Two-year degree - Associates","Four-year degree - Bachelor","Some postgraduate or professional schooling","Postgraduate or professional degree (e.g., MA, MS, PhD, MD, JD))"] )
 mar = st.selectbox("Married", ["no", "yes"])
-par = st.number_input("Parent (0=no, 1=yes)", 0, 1)
-gen = st.number_input("Gender (0=Male, 1=Female)", 0, 1)
+par = st.selectbox("Parent, ["no", "yes"])
+gen = st.selectbox("Gender, ["Male","Female"])
 
 
 
@@ -99,7 +99,17 @@ if mar == "yes":
     mar = 1
 else:
     mar=0
-    
+                   
+if gen == "Female":
+    gen = 1
+else:
+    gen = 0
+                   
+if par =="yes":
+    par = 1
+else:
+    par =0
+                  
  
 new_guess = pd.DataFrame({
     "age": age,
