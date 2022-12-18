@@ -135,7 +135,7 @@ if  user_pred== 1:
 else:
     user_label = "not a LinkedIn User"
     
-if st.checkbox(f" :arrow_left: Click the check box to see our prediciton!"):
+if st.checkbox(f" :arrow_left: Click the box to see our prediciton!"):
     st.write(f"## We predict you are: ### \n {user_label}")
 
 
