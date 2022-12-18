@@ -51,10 +51,10 @@ st.markdown(f"### The purpose of this app is to predict the chances of you being
 st.markdown(f"#### To get started please enter your information below:")
 age = st.slider(label="Enter your age",  min_value=1, max_value=100,value=50)
 inc = st.selectbox(f"Income Range", options = ["<select>","Less than $10,000", "10 to under $20,000","20 to under $30,000","30 to under $40,000","40 to under $50,000","50 to under $75,000"," 75 to under $100,000","100 to under $150,000","$150,000 or more"] )
-deg= st.selectbox(f"Degree Level", options = ["Did not go to High School","High school incomplete","High school graduate or GED","Some college, no degree","Two-year degree - Associates","Four-year degree - Bachelor","Some postgraduate or professional schooling","Postgraduate or professional degree (e.g., MA, MS, PhD, MD, JD))"] )
-mar = st.selectbox("Married", ["no", "yes"])
-par = st.selectbox("Parent", ["no", "yes"])
-gen = st.selectbox("Gender", ["Male","Female"])
+deg= st.selectbox(f"Degree Level", options = ["<select>","Did not go to High School","High school incomplete","High school graduate or GED","Some college, no degree","Two-year degree - Associates","Four-year degree - Bachelor","Some postgraduate or professional schooling","Postgraduate or professional degree (e.g., MA, MS, PhD, MD, JD))"] )
+mar = st.selectbox("Married", ["<select>","no", "yes"])
+par = st.selectbox("Parent", ["<select>","no", "yes"])
+gen = st.selectbox("Gender", ["<select>","Male","Female"])
 
 
 
