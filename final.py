@@ -50,19 +50,9 @@ st.markdown(f"## :sparkles: Welcome :sparkles: ")
 st.markdown(f"### The purpose of this app is to predict the chances of you being a LinkedIn User")
 st.markdown(f"#### To get started please enter your information below:")
 age = st.slider(label="Enter your age",  min_value=1, max_value=100,value=50)
-inc = st.selectbox(f"Income Range - see below for description of options", options = ["Less than $10,000", "10 to under $20,000","20 to under $30,000","30 to under $40,000","40 to under $50,000","50 to under $75,000"," 75 to under $100,000","100 to under $150,000","$150,000 or more"] )
-#st.number_input("Income (low=1 to high=9)", 1, 9)
-deg= st.selectbox(f"Degree Level - see below for description of options", options = ["Did not go to High School","High school incomplete","High school graduate or GED","Some college, no degree","Two-year degree - Associates","Four-year degree - Bachelor","Some postgraduate or professional schooling","Postgraduate or professional degree (e.g., MA, MS, PhD, MD, JD))"] )
-#st.text(f"(1 = Did not go to High School |"
-#"2 = High school incomplete | "
-#"3 = High school graduate or GED |"
-#"4 = Some college, no degree | "
-#"5 = Two-year degree - Associates |"
-#"6 = Four-year degree - Bachelor |"
-#"7 = Some postgraduate or professional schooling |"
-#"8 = Postgraduate or professional degree (e.g., MA, MS, PhD, MD, JD))")
-#deg = st.number_input("College degree (no=0 to yes=1)", 1, 9)
-mar = st.number_input("Married (0=no, 1=yes)", 0, 1)
+inc = st.selectbox(f"Income Range", options = ["Less than $10,000", "10 to under $20,000","20 to under $30,000","30 to under $40,000","40 to under $50,000","50 to under $75,000"," 75 to under $100,000","100 to under $150,000","$150,000 or more"] )
+deg= st.selectbox(f"Degree Level", options = ["Did not go to High School","High school incomplete","High school graduate or GED","Some college, no degree","Two-year degree - Associates","Four-year degree - Bachelor","Some postgraduate or professional schooling","Postgraduate or professional degree (e.g., MA, MS, PhD, MD, JD))"] )
+mar = st.number_input("Married", "no", "yes")
 par = st.number_input("Parent (0=no, 1=yes)", 0, 1)
 gen = st.number_input("Gender (0=Male, 1=Female)", 0, 1)
 
@@ -105,6 +95,10 @@ elif deg == "Some postgraduate or professional schooling":
 else:
     deg = 8
 
+if mar == "yes":
+    mar = 1
+ else:
+    0
     
  
 new_guess = pd.DataFrame({
