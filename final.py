@@ -45,8 +45,8 @@ lr.fit(x_train, y_train)
 
 y_pred = lr.predict(x_test)
 
-
-st.markdown(f"## :sparkles: Welcome :sparkles: ")
+st.markdown(#<div style="text-align: center;"> ## :sparkles: Welcome :sparkles: </div>", unsafe_allow_html=True)
+#st.markdown(f"## :sparkles: Welcome :sparkles: ")
 st.markdown(f"### The purpose of this app is to predict the chances of you being a LinkedIn User")
 st.markdown(f"#### To get started please enter your information below:")
 age = st.slider(label="Enter your age",  min_value=1, max_value=100,value=50)
