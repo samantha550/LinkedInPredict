@@ -97,7 +97,7 @@ else:
 
 if mar == "yes":
     mar = 1
- else:
+else:
     mar=0
     
  
